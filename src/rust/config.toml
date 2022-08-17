@@ -1,0 +1,54 @@
+[llvm]
+optimize = true
+release-debuginfo = false
+ccache = "/usr/local/bin/ccache"
+ninja = true
+#static-libstdcpp = true
+
+#cflags = ""
+#cxxflags = ""
+#ldflags = ""
+
+[build]
+
+build-stage = 2
+test-stage = 2
+doc-stage = 2
+
+host = ["aarch64-unknown-linux-musl"]
+target = ["aarch64-unknown-linux-musl"]
+
+extended = true
+cargo-native-static = true
+
+#tools = ["cargo", "clippy", "rustfmt", "analysis", "src"] 
+
+[install]
+
+prefix = "/mmc"
+sysconfdir = "etc"
+
+[rust]
+
+optimize = true
+debug = false
+description = "tomatoware"
+rpath = false
+channel = "stable"
+
+[target.aarch64-unknown-linux-musl]
+
+cc = "/opt/tomatoware/aarch64-mmc/bin/aarch64-linux-gcc"
+cxx = "/opt/tomatoware/aarch64-mmc/bin/aarch64-linux-g++"
+ar = "/opt/tomatoware/aarch64-mmc/bin/aarch64-linux-ar"
+ranlib = "/opt/tomatoware/aarch64-mmc/bin/aarch64-linux-ranlib"
+linker = "/opt/tomatoware/aarch64-mmc/bin/aarch64-linux-gcc"
+
+musl-root = "/opt/tomatoware/aarch64-mmc/aarch64-tomatoware-linux-musl/sysroot"
+
+#crt-static = true
+
+[dist]
+
+src-tarball = false
+compression-formats = ["gz"]
