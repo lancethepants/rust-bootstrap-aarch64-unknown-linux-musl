@@ -38,13 +38,13 @@ channel = "stable"
 
 [target.aarch64-unknown-linux-musl]
 
-cc = "/opt/tomatoware/aarch64-mmc/bin/aarch64-linux-gcc"
-cxx = "/opt/tomatoware/aarch64-mmc/bin/aarch64-linux-g++"
-ar = "/opt/tomatoware/aarch64-mmc/bin/aarch64-linux-ar"
-ranlib = "/opt/tomatoware/aarch64-mmc/bin/aarch64-linux-ranlib"
-linker = "/opt/tomatoware/aarch64-mmc/bin/aarch64-linux-gcc"
+cc = "/opt/tomatoware/aarch64-musl-mmc/bin/aarch64-linux-gcc"
+cxx = "/opt/tomatoware/aarch64-musl-mmc/bin/aarch64-linux-g++"
+ar = "/opt/tomatoware/aarch64-musl-mmc/bin/aarch64-linux-ar"
+ranlib = "/opt/tomatoware/aarch64-musl-mmc/bin/aarch64-linux-ranlib"
+linker = "/opt/tomatoware/aarch64-musl-mmc/bin/aarch64-linux-gcc"
 
-musl-root = "/opt/tomatoware/aarch64-mmc/aarch64-tomatoware-linux-musl/sysroot"
+musl-root = "/opt/tomatoware/aarch64-musl-mmc/aarch64-tomatoware-linux-musl/sysroot"
 
 #crt-static = true
 

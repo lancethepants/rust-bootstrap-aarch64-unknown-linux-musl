@@ -2,7 +2,7 @@ export DESTARCH=aarch64
 export PREFIX=/mmc
 
 export EXTRACFLAGS = -mcpu=cortex-a53
-export PATH := /opt/tomatoware/$(DESTARCH)$(subst /,-,$(PREFIX))/bin/:$(PATH)
+export PATH := $(PATH):/opt/tomatoware/aarch64-musl$(subst /,-,$(PREFIX))/bin/
 
 rust:
 	./scripts/rust.sh
